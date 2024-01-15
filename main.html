@@ -2,12 +2,12 @@
 title: 1. Single file
 layout: page
 ---
-
+https://huggingface.co/spaces/mansearchingforameaning/test3
 <input id="photo" type="file">
 <div id="results"></div>
 <script>
   async function loaded(reader) {
-    const response = await fetch('https://hf.space/embed/jph00/pets/+/api/predict/', {
+    const response = await fetch('https://huggingface.co/spaces/mansearchingforameaning/test3', {
       method: "POST", body: JSON.stringify({ "data": [reader.result] }),
       headers: { "Content-Type": "application/json" }
     });
