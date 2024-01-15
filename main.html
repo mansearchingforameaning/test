@@ -15,6 +15,15 @@ layout: page
     const label = json['data'][0]['confidences'][0]['label'];
     results.innerHTML = `<br/><img src="${reader.result}" width="300"> <p>${label}</p>`
   }
+
+from gradio_client import Client
+
+client = Client("https://mansearchingforameaning-test3.hf.space/--replicas/zcbuf/")
+result = client.predict(
+		"https://raw.githubusercontent.com/gradio-app/gradio/main/test/test_files/bus.png",	# filepath  in 'img' Image component
+		api_name="/predict"
+)
+print(result)
   function read() {
     const reader = new FileReader();
     reader.addEventListener('load', () => loaded(reader))
