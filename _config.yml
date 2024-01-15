@@ -1,0 +1,9 @@
+remote_theme: pages-themes/hacker
+plugins:
+- jekyll-remote-theme
+
+title: Oualid
+description: example of cancer detection computer vision API
+
+author:
+  name: Oualid
